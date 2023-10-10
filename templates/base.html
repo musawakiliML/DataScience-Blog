@@ -6,11 +6,17 @@
     <title>Data Science Blog</title>
 </head>
 <body>
+
     <header>
-        <a href="{% url 'home' %}">Home</a> | <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'home' %}">Blog</a> | <a href="{% url 'about' %}">About</a>
+        <h1>Hello, Welcome Data Science Blog</h1>
     </header>
 
-    {% block content %}
-    {% endblock content %}
+
+    <div>
+        {% block content %}
+        {% endblock content %}
+    </div>
+    
 </body>
 </html>

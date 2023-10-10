@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Hello, Welcome Data Science Blog</h1>
+    {% for post in object_list %}
+        <div class="post-entry">
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.body }}</p>
+        </div>
+    {% endfor %}
 {% endblock content %}
