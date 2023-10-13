@@ -12,10 +12,13 @@
 <body>
 
     <header>
-        <a href="{% url 'home' %}">Blog</a> | <a href="{% url 'about' %}">About</a>
-        <h1>Hello, Welcome Data Science Blog</h1>
+        <div class="nav-left">
+            <h1><a href="{% url 'home' %}">Blog</a> | <a href="{% url 'about' %}">About</a></h1>
+        </div>
+        <div class="nav-right">
+            <a href="{% url 'post_new' %}">+ New Blog Post</a>
+        </div>
     </header>
-
 
     <div>
         {% block content %}
