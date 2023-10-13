@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-from django.views.generic import TemplateView, ListView, DetailView
+from django.views.generic import TemplateView, ListView, DetailView, CreateView
 from .models import Post
 
 # Create your views here.
@@ -17,3 +17,8 @@ class BlogListView(ListView):
 class BlogDetailView(DetailView):
     model = Post
     template_name = 'post.html'
+
+class BlogCreateView(CreateView):
+    model = Post
+    template_name = 'post_new.html'
+    fields = "__all__"
